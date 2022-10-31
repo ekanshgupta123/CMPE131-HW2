@@ -1,0 +1,4 @@
+The change inside increment_int_a changes the variable a after the function call.
+The change inside increment_int_b changes the variable b after the function call.
+Their answers do not differ because we are reassigning the variable to be a different value for both cases.
+
