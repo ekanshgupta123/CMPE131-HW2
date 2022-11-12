@@ -1,6 +1,14 @@
 def sort_dictionary(input): 
-	sorted_dict = {k: values for k, values in sorted(input.items(), key = lambda item: item[1][1])}	
-	list = []
-	for i in sorted_dict:
-		list.append(tuple((i, sorted_dict[i][0])))
-	return list
+	returnList = []
+	keyList = list(input.keys())
+	valList = list(input.values())
+	inputValues = list(input.values())
+	for i in range (0, len(inputValues)):
+		for j in range(0, len(inputValues)-i-1):
+			if (inputValues[j][-1] > inputValues[j+1][-1]):
+				temp = inputValues[j]
+				inputValues[j] = inputValues[j+1]
+				inputValues[j+1] = temp
+	for i in inputValues:
+		returnList.append(tuple([keyList[valList.index(i)], i[0]]))
+	return returnList

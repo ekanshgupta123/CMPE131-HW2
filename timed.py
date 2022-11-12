@@ -6,4 +6,3 @@ def timeme(func):
 		last = time.time()
 		print("Total time ", last - first)
 	return wrapper
-
