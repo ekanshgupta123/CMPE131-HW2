@@ -8,4 +8,3 @@ def swap_list(input):
 	a[middle:] = input[middle:]
 	a[-1] = input[middle-1]
 	return a
-print(swap_list([1,2,3,4]))	
